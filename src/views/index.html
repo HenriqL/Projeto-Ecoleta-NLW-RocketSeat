@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoleta - Next Level Week</title>
+    <!--Styles-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div id="page-home">
+        <div class="content">
+            <header>
+                <img src="/assets/logo.svg" alt="logomarca">
+                <a href="/create-point">
+                    <span></span>
+                    Cadastre um ponto de coleta
+                </a>
+            </header>
+            <main>
+                <h1>Seu marketplace</h1>
+                <p>Ajude-nos a encontrar um ponto de coleta de forma eficiente</p>
+                <a href="#"><span></span> <strong>Pesquise pontos de coleta</strong></a>
+            </main>
+        </div>
+    </div>
+
+
+
+    <div id="modal" class="hide">
+        <div class="content">
+            <div class="header">
+                <h1>Pontos de Coleta</h1>
+                <a href="#">Fechar</a>
+            </div>
+            <form action="/search-results">           
+                <label for="search">Cidade</label>
+                <div class="search field">
+                    <input type="text" name="search" placeholder="Pesquise por cidade" required>
+                    <button>
+                        <img src="/assets/search.svg" alt="Buscar">
+                    </button>
+                </div>
+            </form>          
+        </div>
+    </div>
+
+<script src="/js/index.js"></script>
+</body>
+
+</html>
