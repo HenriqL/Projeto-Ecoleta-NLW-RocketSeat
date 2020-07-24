@@ -38,9 +38,17 @@ form fieldset{
 }
 form legend{
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 form legend h2{
     font-size: 24px;
+}
+form legend span{
+    color:var(--title-color);
+    font-size: 14px;
 }
 form .field{
     flex: 1;
@@ -83,6 +91,7 @@ form button{
     border-radius: 8px;
     margin-top: 40px;
     transition: all 400ms;
+    cursor: pointer;
 }
 
 form button:hover{

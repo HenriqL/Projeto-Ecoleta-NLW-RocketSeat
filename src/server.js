@@ -28,4 +28,4 @@ server.get("/search", (req, res) =>{
 })
 
 //Porta do servidor
-server.listen(5000)
+server.listen(3000)
