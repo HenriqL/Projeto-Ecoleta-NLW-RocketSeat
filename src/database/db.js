@@ -4,10 +4,10 @@ const sqlite3 = require("sqlite3").verbose()
  const db = new sqlite3.Database("./src/database/database.db")
 
 //Ultilza o objto de Banco de dados para as operações
-db.serialize( ()=>{
+db.serialize(() => {
     //cria a tabela com comandos SQL
-    db.rum(`
-            CREATE TABLE IF NO EXISTS places (
+    db.run(`
+            CREATE TABLE IF NOT EXISTS places (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 image TEXT,
                 name TEXT,
@@ -49,8 +49,8 @@ db.serialize( ()=>{
         console.log("Cadastrado com sucesso")
         console.log(this)
     }
-    
-    db.rum(query, values, afterInsertData)
+
+    db.run(query, values, afterInsertData)
     //consulta os dados
 
     //deleta os dados da tabela
