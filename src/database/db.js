@@ -20,7 +20,7 @@ db.serialize( ()=>{
     `)
     //inserir dados 
     // O VALUE fica como interroção, pois não sabemos o valor que vai ser inserido
-    db.rum(`
+    const query = `
             INSERT INTO places (
                 image,
                 name,
@@ -30,7 +30,27 @@ db.serialize( ()=>{
                 city,
                 items
             ) VALUES (?, ?, ?, ?, ?, ?, ?); 
-        `)
+        `
+
+    const values = [
+        "https://images.unsplash.com/photo-1574689049377-2d1c02921490?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+        "Colectoria",
+        "Guilherme Gemballa, Jardin América",
+        "Nº 260",
+        "Santa Catarina",
+        "Rio do Sul",
+        "Resíduos Eletrônicos, Lâmpadas"
+    ]
+
+    function afterInsertData(err){
+        if(err){
+            return console.log(err)
+        }
+        console.log("Cadastrado com sucesso")
+        console.log(this)
+    }
+    
+    db.rum(query, values, afterInsertData)
     //consulta os dados
 
     //deleta os dados da tabela
