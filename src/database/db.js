@@ -64,7 +64,7 @@ module.exports = db
 //     // })
 
 //     // //deleta os dados da tabela
-    // db.run(`DELETE FROM places WHERE id = ?`, [5], function(err){
+    // db.run(`DELETE FROM places WHERE id = ?`, [9], function(err){
     //     if(err){
     //         return console.log(err)
     //     }console.log("Registro deletado com sucesso")
