@@ -32,11 +32,12 @@ server.get("/search", (req, res) =>{
 db.all(`SELECT * FROM places`, function(err, rows){
         if(err){
             return console.log(err)
-        }console.log("Aqui estão seus registros")
-        console.log(rows)
-    })
+        }
+        const total = rows.length
 
-  res.render("search-results.html")
+        //Mostra a pagina HTML com os dandos do Banco de dados
+        return res.render("search-results.html", { places: rows, total:total})
+    })
 })
 
 //Porta do servidor
