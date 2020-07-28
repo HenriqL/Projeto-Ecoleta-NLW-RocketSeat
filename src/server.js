@@ -22,7 +22,11 @@ server.get("/",(req, res) =>{
 })
 //Create-Point
 server.get("/create-point", (req, res) =>{
-    res.render("create-point.html")
+  //Query strings da URL 
+  req.query
+
+
+    return res.render("create-point.html")
 })
 //Search-Result
 server.get("/search", (req, res) =>{
