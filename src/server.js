@@ -6,6 +6,9 @@ const db = require("./database/db")
 //Configuração da pasta Public
 
 server.use(express.static("public"))
+//habilita o uso do req.body na aplicação
+
+server.use(express.urlencoded({extended: true}))
 
 //Ultilizando template engine
 const nunjucks = require("nunjucks")
@@ -23,11 +26,18 @@ server.get("/",(req, res) =>{
 //Create-Point
 server.get("/create-point", (req, res) =>{
   //Query strings da URL 
-  req.query
+  // console.log(req.query)
 
 
     return res.render("create-point.html")
 })
+
+server.post("/savepoint", (req, res) =>{
+  console.log(req.body)
+
+  return res.send("ok")
+})
+
 //Search-Result
 server.get("/search", (req, res) =>{
 
